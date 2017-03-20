@@ -1,0 +1,3 @@
+[development]
+image_upload_folder = /tmp/
+image_upload_folder1 = /projects/fleet/images/
