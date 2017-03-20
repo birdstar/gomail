@@ -28,9 +28,9 @@ func main() {
 		port = DEFAULT_PORT
 	}
 
-	http.HandleFunc("/", helloworld)
+	http.HandleFunc("/upload", helloworld)
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
-	
+
 	log.Printf("Starting app on port %+v\n", port)
 	http.ListenAndServe(":"+port, nil)
 }
