@@ -1,6 +1,6 @@
 {
 	"ImportPath": "gomail",
-	"GoVersion": "go1.6.1",
+	"GoVersion": "go1.5.4",
 	"GodepVersion": "v79",
 	"Deps": [
 		{
