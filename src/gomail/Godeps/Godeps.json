@@ -1,6 +1,19 @@
 {
-	"ImportPath": "gohelloworld",
-	"GoVersion": "go1.6.1",
+	"ImportPath": "gomail",
+	"GoVersion": "go1.8",
+	"GodepVersion": "v79",
 	"Deps": [
+		{
+			"ImportPath": "github.com/drone/routes",
+			"Rev": "853bef2b231162bb7b09355720416d3af1510d88"
+		},
+		{
+			"ImportPath": "github.com/golang/glog",
+			"Rev": "23def4e6c14b4da8ac2ed8007337bc5eb5007998"
+		},
+		{
+			"ImportPath": "github.com/larspensjo/config",
+			"Rev": "b6db95dc6321c46dab9cd53d0c85164a27686aa6"
+		}
 	]
 }

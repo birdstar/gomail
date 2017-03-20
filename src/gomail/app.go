@@ -1,7 +1,7 @@
 package main
 
 import (
-	"wc-server/actions"
+	"gomail/actions"
 	"github.com/drone/routes"
 	"net/http"
 	"os"
