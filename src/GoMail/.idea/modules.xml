@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/GoMail.iml" filepath="$PROJECT_DIR$/GoMail.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gomail.iml" filepath="$PROJECT_DIR$/gomail.iml" />
     </modules>
   </component>
 </project>

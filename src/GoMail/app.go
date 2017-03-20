@@ -1,36 +1,60 @@
 package main
 
 import (
-	"log"
+	"wc-server/actions"
+	"github.com/drone/routes"
 	"net/http"
 	"os"
-	"html/template"
-	//for extracting service credentials from VCAP_SERVICES
-	//"github.com/cloudfoundry-community/go-cfenv"
+	"flag"
+	"fmt"
 )
 
-const (
-	DEFAULT_PORT = "8080"
-)
-
-var index = template.Must(template.ParseFiles(
-  "templates/_base.html",
-  "templates/index.html",
-))
-
-func helloworld(w http.ResponseWriter, req *http.Request) {
-  index.Execute(w, nil)
+func usage() {
+	fmt.Fprintf(os.Stderr, "usage: example -stderrthreshold=[INFO|WARN|FATAL] -log_dir=[string]\n", )
+	flag.PrintDefaults()
+	os.Exit(2)
 }
 
+func init() {
+	flag.Usage = usage
+	// NOTE: This next line is key you have to call flag.Parse() for the command line
+	// options or "flags" that are defined in the glog module to be picked up.
+	flag.Parse()
+}
+
+
 func main() {
-	var port string
-	if port = os.Getenv("PORT"); len(port) == 0 {
-		port = DEFAULT_PORT
-	}
 
-	http.HandleFunc("/upload", helloworld)
-	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
+	argsWithProg := os.Args[1]
 
-	log.Printf("Starting app on port %+v\n", port)
-	http.ListenAndServe(":"+port, nil)
+	mux := routes.New()
+
+	mux.Get("/index", actions.Index)
+	mux.Get("/upload", actions.Upload)
+	mux.Post("/upload", actions.Upload)
+
+	http.Handle("/assets/", http.StripPrefix("/assets/", http.FileServer(http.Dir("assets"))))
+
+
+	http.Handle("/", mux)
+
+
+	http.ListenAndServe(":"+argsWithProg, nil)
+	//s := &http.Server{
+	//	Addr: ":"+argsWithProg,
+	//	Handler: mux,
+	//	TLSConfig: &tls.Config{
+	//		//ClientCAs:  utils.LoadCA("/etc/pki/tls/certs/ca-bundle.crt"),
+	//		//ClientCAs:  utils.LoadCA("/Users/wangpeng/keys/gpfs/ca.crt"),
+	//		//ClientAuth: tls.RequireAnyClientCert,
+	//	},
+	//}
+	//
+	//e := s.ListenAndServeTLS("/etc/httpd/conf.d/ssl.crt", "/etc/httpd/conf.d/ssl.key")
+	////e := s.ListenAndServeTLS("/Users/wangpeng/keys/gpfs/server.crt", "/Users/wangpeng/keys/gpfs/server.key")
+	//if e != nil {
+	//	log.Fatal("ListenAndServeTLS: ", e)
+	//}
+
+
 }

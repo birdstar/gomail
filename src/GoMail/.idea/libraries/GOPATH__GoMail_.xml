@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="GOPATH &lt;GoMail&gt;">
+  <library name="GOPATH &lt;gomail&gt;">
     <CLASSES>
       <root url="file://$USER_HOME$/goserver/src/gpfs-apiserver" />
       <root url="file://$USER_HOME$/wechatproj/ui/wc-server/src/wc-server" />

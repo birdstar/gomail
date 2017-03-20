@@ -8,7 +8,7 @@ import (
 	//"os/exec"
 	"fmt"
 	"github.com/golang/glog"
-	"wc-server/utils"
+	"gomail/utils"
 	"encoding/json"
 )
 //var out, err = exec.Command("pwd").Output()
