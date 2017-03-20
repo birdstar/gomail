@@ -1,19 +1,11 @@
 {
 	"ImportPath": "gohelloworld",
 	"GoVersion": "go1.5.4",
+	"Packages": [
+		"github.com/drone/routes",
+		"github.com/golang/glog",
+		"github.com/larspensjo/config"
+	],
 	"Deps": [
-		{
-			"ImportPath": "github.com/drone/routes"
-		},
-		{
-			"ImportPath": "github.com/golang/glog"
-		},
-		{
-			"ImportPath": "github.com/larspensjo/config"
-		},
-		{
-			"ImportPath": "github.com/drone/routes"
-		}
-
 	]
 }

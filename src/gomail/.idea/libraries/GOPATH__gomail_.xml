@@ -6,7 +6,6 @@
       <root url="file://$USER_HOME$/gospace/src/k8s.io" />
       <root url="file://$USER_HOME$/gowork/src/github.com" />
       <root url="file://$USER_HOME$/gowork/src/golang.org" />
-      <root url="file://$USER_HOME$/demospace1/src/GoMail" />
       <root url="file://$USER_HOME$/softlayer-go/src/github.com" />
       <root url="file://$USER_HOME$/gowork/src/gopkg.in" />
     </CLASSES>
@@ -17,7 +16,6 @@
       <root url="file://$USER_HOME$/gospace/src/k8s.io" />
       <root url="file://$USER_HOME$/gowork/src/github.com" />
       <root url="file://$USER_HOME$/gowork/src/golang.org" />
-      <root url="file://$USER_HOME$/demospace1/src/GoMail" />
       <root url="file://$USER_HOME$/softlayer-go/src/github.com" />
       <root url="file://$USER_HOME$/gowork/src/gopkg.in" />
     </SOURCES>
