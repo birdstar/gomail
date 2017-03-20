@@ -1,6 +1,6 @@
 {
 	"ImportPath": "gohelloworld",
-	"GoVersion": "go1.6.2",
+	"GoVersion": "go1.6.1",
 	"Packages": [
 		"github.com/drone/routes",
 		"github.com/golang/glog",
